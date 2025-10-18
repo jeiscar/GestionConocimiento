@@ -16,7 +16,7 @@ Este proyecto muestra una tabla interactiva de criptomonedas con detalle individ
 Clona el repositorio y navega al directorio del proyecto:
 
 ```bash
-git clone git@github.com:jcardenasq/Prueba.git
+git clone git@github.com:jeiscar/GestionConocimiento
 cd Prueba
 ```
 
@@ -65,7 +65,7 @@ src/
 
 ## 🛠️ Autor
 
-* [@jcardenasq](https://github.com/jcardenasq)
+* [@jeiscar](https://github.com/jeiscar)
 
 ---
 
