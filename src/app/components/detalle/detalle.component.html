@@ -1,0 +1,19 @@
+<div *ngIf="(crypto$ | async) as crypto;">
+  <h2>{{ crypto.name }} ({{ crypto.symbol }})</h2>
+  <img [src]="crypto.image" alt="{{ crypto.name }}" width="32" height="32">
+  <table>
+    <thead>
+      <tr>
+        <th>Precio Actual</th>
+        <th>capitalización de mercado</th>
+        <th>volumen total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <td>{{ crypto.current_price }}</td>
+      <td>{{ crypto.market_cap }}</td>
+      <td>{{ crypto.total_volume }}</td>
+    </tbody>
+  </table>
+  <button (click)="buttonVolver()">pag. Ant</button>
+</div>

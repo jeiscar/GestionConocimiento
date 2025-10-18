@@ -1,0 +1,22 @@
+<input id="Buscar" type="text" class="input" placeholder="Buscar" #Buscar
+        (input)="searchTerm.set(Buscar.value);" />
+<table>
+  <thead>
+    <tr>
+      <th>Icono</th>
+      <th>Nombre</th>
+      <th>Simbolo</th>
+      <th>Precio actual</th>
+      <th>Cambio de precio en 24h (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let CryptoData of filteredData()" (click)="verDetalle(CryptoData.symbol)" (keydown)="verDetalle(CryptoData.symbol)" tabindex="0" style="cursor: pointer;">
+      <td><img [src]="CryptoData.image" alt="{{ CryptoData.name }}" width="32" height="32"></td>
+      <td>{{ CryptoData.name }}</td>
+      <td>{{ CryptoData.symbol }}</td>
+      <td>{{ CryptoData.current_price }}</td>
+      <td [ngStyle]="{ color: cambiarcolor(CryptoData.price_change_percentage_24h)}">{{ CryptoData.price_change_percentage_24h }}</td>
+    </tr>
+  </tbody>
+</table>
